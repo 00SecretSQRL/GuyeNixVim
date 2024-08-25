@@ -15,7 +15,7 @@
   } @ inputs: let
     config = import ./config; # import the module directly
   in
-    flake-utils.lib.eachdefaultsystem (system: let
+    flake-utils.lib.eachDefaultSystem (system: let
       nixvimlib = nixvim.lib.${system};
       pkgs = import nixpkgs {inherit system;};
       nixvim' = nixvim.legacypackages.${system};
