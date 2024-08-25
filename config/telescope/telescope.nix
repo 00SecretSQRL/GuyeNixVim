@@ -37,7 +37,7 @@
         action = "find_files";
         options.desc = "Find project files";
       };
-      "<leader>/" = {
+      "<leader>fg" = {
         action = "live_grep";
         options.desc = "Grep (root dir)";
       };
@@ -49,7 +49,7 @@
         action = "buffers";
         options.desc = "+buffer";
       };
-      "<leader>ff" = {
+      "<leader>fa" = {
         action = "find_files";
         options.desc = "Find project files";
       };
