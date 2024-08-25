@@ -19,7 +19,7 @@
       nixvimlib = nixvim.lib.${system};
       pkgs = import nixpkgs {inherit system;};
       nixvim' = nixvim.legacyPackages.${system};
-      nvim = nixvim'.makenixvimwithmodule {
+      nvim = nixvim'.makeNixvimWithModule {
         inherit pkgs;
         module = config;
         # you can use `extraspecialargs` to pass additional arguments to your module files
