@@ -44,7 +44,7 @@
     ./snippets/luasnip.nix
 
     ./statusline/lualine.nix
-    # ./statusline/staline.nix
+    ./statusline/staline.nix
 
     ./telescope/telescope.nix
 
@@ -53,17 +53,17 @@
     ./ui/indent-blankline.nix
     ./ui/noice.nix
     ./ui/nvim-notify.nix
-    ./ui/nui.nix
+    # ./ui/nui.nix
 
     ./utils/better-escape.nix
-    ./utils/neocord.nix
+    # ./utils/neocord.nix
     ./utils/hardtime.nix
     ./utils/harpoon.nix
     ./utils/illuminate.nix
     ./utils/markdown-preview.nix
     ./utils/mini.nix
     ./utils/neodev.nix
-    ./utils/neotest.nix
+    # ./utils/neotest.nix
     ./utils/nvim-autopairs.nix
     ./utils/nvim-colorizer.nix
     ./utils/nvim-surround.nix
