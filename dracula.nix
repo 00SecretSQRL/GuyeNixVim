@@ -1,7 +1,7 @@
 {
   colorschemes = {
     dracula = {
-      enable = true;
+      enable = false;
       settings = {
         styles = {
           italic = true;
