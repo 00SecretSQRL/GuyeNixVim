@@ -1,7 +1,7 @@
 {
   plugins.inc-rename = {
     enable = true;
-    keymap = [
+    keys = [
     {
       mode = "n";
       key = "<leader>rn";
