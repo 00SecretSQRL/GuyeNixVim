@@ -1,7 +1,9 @@
 {
   plugins.mini = {
     enable = true;
+    mockDevIcons = true;
     modules = {
+      icons = true;
       comment = {
         options = {
           customCommentString = ''
