@@ -70,7 +70,7 @@
     {
       mode = "n";
       key = "<leader>rn";
-      action = ":IncRename<CR>";
+      action = ":IncRename";
       options = {
         silent = true;
         desc = "rename values";
