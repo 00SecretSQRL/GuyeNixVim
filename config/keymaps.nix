@@ -66,13 +66,14 @@
       };
     }
 
+    
     {
       mode = "n";
-      key = "<leader><tab><tab>";
-      action = "<cmd>tabnew<cr>";
+      key = "<leader>rn";
+      action = ":IncRename<CR>";
       options = {
         silent = true;
-        desc = "New Tab";
+        desc = "rename values";
       };
     }
 
