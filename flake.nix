@@ -2,7 +2,7 @@
   description = "Guye made a flake for nixvim";
 
   inputs = {
-    nixvim.url = "github:nix-community/nixvim/nixos-24.05";
+    nixvim.url = "github:nix-community/nixvim";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
