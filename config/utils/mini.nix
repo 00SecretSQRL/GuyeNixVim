@@ -3,7 +3,7 @@
     enable = true;
     mockDevIcons = true;
     modules = {
-      icons = true;
+      icons = {};
       comment = {
         options = {
           customCommentString = ''
