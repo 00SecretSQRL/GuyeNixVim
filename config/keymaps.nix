@@ -70,7 +70,11 @@
     {
       mode = "n";
       key = "<leader>rn";
-      action = ":IncRename";
+      action.__raw = ''
+        function()
+          return ":IncRename" .. vim.fn.expand("<cword>")
+        end,
+      '';
       options = {
         silent = true;
         desc = "rename values";
