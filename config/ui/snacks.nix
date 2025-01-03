@@ -1,5 +1,5 @@
 {
-    plugins.snacks = {
+    plugins.snacks-nvim = {
         enable = true;
         settings= {
             bigfile = { enabled = true; };
