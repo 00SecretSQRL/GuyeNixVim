@@ -32,7 +32,7 @@
         # run `nix flake check .` to verify that your config is not broken
         default = nixvimlib.check.mktestderivationfromnvim {
           inherit nvim;
-          name = "neve";
+          name = "Guye";
         };
       };
 
