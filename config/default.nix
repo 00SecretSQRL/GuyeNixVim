@@ -50,6 +50,7 @@
     ./telescope/telescope.nix
 
     ./ui/alpha.nix
+    ./ui/snacks.nix
     ./ui/dressing-nvim.nix
     ./ui/indent-blankline.nix
     ./ui/noice.nix
