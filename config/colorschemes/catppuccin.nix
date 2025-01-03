@@ -1,7 +1,7 @@
 {
   colorschemes = {
     catppuccin = {
-      enable = true;
+      enable = false;
       settings = {
         background = {
           light = "macchiato";
@@ -35,10 +35,10 @@
               background = true;
             };
             underlines = {
-              errors = ["underline"];
-              hints = ["underline"];
-              information = ["underline"];
-              warnings = ["underline"];
+              errors = [ "underline" ];
+              hints = [ "underline" ];
+              information = [ "underline" ];
+              warnings = [ "underline" ];
             };
           };
         };
