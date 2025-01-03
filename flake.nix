@@ -2,8 +2,8 @@
   description = "Guye made a flake for nixvim";
 
   inputs = {
-    nixpackages.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim.url = "github:nix-community/nixvim";
+    nixpackages.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixvim.url = "github:nix-community/nixvim/nixos-24.11";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
   };
