@@ -1,7 +1,7 @@
 {
   plugins.illuminate = {
-    enable = false;
-    underCursor = false;
+    enable = true;
+    underCursor = true;
     filetypesDenylist = [
       "DressingSelect"
       "Outline"
