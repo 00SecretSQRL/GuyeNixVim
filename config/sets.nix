@@ -105,7 +105,7 @@
 
       # We don't need to see things like INSERT anymore
       showmode = false;
-
+      clipboard = "unnamedplus"; # Use the system clipboard
       # Maximum number of items to show in the popup menu (0 means "use available screen space")
       pumheight = 0;
 
