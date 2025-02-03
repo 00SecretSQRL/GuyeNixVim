@@ -3,7 +3,9 @@
     enable = false;
     mockDevIcons = true;
     modules = {
-      icons = {};
+      icons = {
+        enable = true;
+      };
       comment = {
         options = {
           customCommentString = ''
@@ -11,7 +13,7 @@
           '';
         };
       };
-      cursorword = {};
+      cursorword = { };
     };
   };
 }
