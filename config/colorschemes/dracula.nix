@@ -1,7 +1,7 @@
 {
-  colorschemes = {
-    shades-of-purple = {
-      enable = true;
+    colorschemes = {
+        dracula = {
+            enable = true;
+        };
     };
-  };
 }
