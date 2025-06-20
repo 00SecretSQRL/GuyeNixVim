@@ -1,6 +1,6 @@
 {
   colorschemes = {
-    dracula = {
+    shades-of-purple = {
       enable = true;
     };
   };
