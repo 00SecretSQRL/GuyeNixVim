@@ -10,6 +10,7 @@
     ./colorschemes/catppuccin.nix
     ./colorschemes/rose-pine.nix
     ./colorschemes/dracula.nix
+    ./colorschemes/shades-of-purple.nix
 
     ./completion/cmp.nix
     ./completion/copilot.nix
