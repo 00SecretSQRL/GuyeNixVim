@@ -2,7 +2,7 @@
   plugins.copilot-lua = {
     enable = true;
     panel = {
-      enabled = false;
+      enabled = true;
       autoRefresh = true;
       keymap = {
         jumpPrev = "[[";
