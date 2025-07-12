@@ -9,7 +9,7 @@
         jumpNext = "]]";
         accept = "<CR>";
         refresh = "gr";
-        open = "<leader>cj";
+        open = "<leader>cu";
       };
       layout = {
         position = "bottom"; # | top | left | right
