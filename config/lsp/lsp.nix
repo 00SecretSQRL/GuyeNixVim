@@ -28,7 +28,7 @@
         eslint = {enable = true;};
         pyright = {enable = true;};
         ruff_lsp = {enable = true;};
-        gols = {
+        gopls = {
           enable = true;
           extraOptions = {
             settings = {
