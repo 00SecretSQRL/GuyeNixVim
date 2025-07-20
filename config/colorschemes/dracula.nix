@@ -1,7 +1,7 @@
 {
     colorschemes = {
         dracula = {
-            enable = false;
+            enable = true;
         };
     };
 }
