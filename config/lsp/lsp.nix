@@ -28,6 +28,27 @@
         eslint = {enable = true;};
         pyright = {enable = true;};
         ruff_lsp = {enable = true;};
+        gols = {
+          enable = true;
+          extraOptions = {
+            settings = {
+              gopls = {
+            analyses = {
+              unusedparams = true;
+              shadow = true;
+            };
+            staticcheck = true;
+            usePlaceholders = true;
+            completeUnimported = true;
+            codelenses = {
+              gc_details = true;
+              generate = true;
+              test = true;
+            };
+              };
+            };
+          };
+        };
         terraformls = {enable = true;};
         rust_analyzer = {
           enable = true;
