@@ -8,6 +8,7 @@
 
     ./colorschemes/base16.nix
     ./colorschemes/catppuccin.nix
+    ./colorschemes/purple.nix
     ./colorschemes/rose-pine.nix
     ./colorschemes/dracula.nix
 
