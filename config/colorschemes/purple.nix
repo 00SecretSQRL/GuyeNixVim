@@ -5,10 +5,9 @@
   ...
 }: {
   config = {
-    colorschemes = {
+    plugins = {
       shades-of-purple = {
         enable = true;
-        colorscheme = "shades_of_purple";
         src = pkgs.fetchFromGitHub {
           owner = "Rigellute";
           repo = "shades-of-purple.vim";
@@ -17,5 +16,9 @@
         };
       };
     };
+    
+    extraConfigLua = ''
+      vim.cmd("colorscheme shades_of_purple")
+    '';
   };
 }
