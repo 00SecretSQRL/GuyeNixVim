@@ -10,6 +10,10 @@
       show_help = true;
       show_folds = true;
       
+      # Enable inline editing
+      auto_insert_mode = true;
+      clear_chat_on_new_prompt = false;
+      
       # Question header
       question_header = "## User ";
       answer_header = "## Copilot ";
@@ -57,7 +61,7 @@
         };
         yank_diff = {
           normal = "gy";
-          register = '"';
+          register = "\"";
         };
         show_diff = {
           normal = "gd";
@@ -143,6 +147,51 @@
       action = "<cmd>CopilotChatTests<CR>";
       options = {
         desc = "Generate tests with Copilot";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cci";
+      action = "<cmd>CopilotChat<CR>";
+      options = {
+        desc = "Open Copilot Chat";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cca";
+      action = "<cmd>CopilotChat<CR>";
+      options = {
+        desc = "Open Copilot Chat";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ccs";
+      action = "<cmd>CopilotChat What are the available models?<CR>";
+      options = {
+        desc = "Ask about available models";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ccl";
+      action = "<cmd>CopilotChat<CR>";
+      options = {
+        desc = "Open Copilot Chat";
+        silent = true;
+      };
+    }
+    {
+      mode = "v";
+      key = "<leader>ccr";
+      action = "<cmd>CopilotChatVisual<CR>";
+      options = {
+        desc = "Chat about selection";
         silent = true;
       };
     }

@@ -718,6 +718,30 @@
           icon = "󰙨";
         }
         {
+          __unkeyed-1 = "<leader>cci";
+          mode = "n";
+          desc = "Open Copilot Chat";
+          icon = "󰭻";
+        }
+        {
+          __unkeyed-1 = "<leader>cca";
+          mode = "n";
+          desc = "Open Copilot Chat";
+          icon = "󰔛";
+        }
+        {
+          __unkeyed-1 = "<leader>ccs";
+          mode = "n";
+          desc = "Ask about available models";
+          icon = "󰆓";
+        }
+        {
+          __unkeyed-1 = "<leader>ccl";
+          mode = "n";
+          desc = "Open Copilot Chat";
+          icon = "󰁯";
+        }
+        {
           __unkeyed-1 = "<leader>kt";
           mode = "n";
           group = "Test keypress display";

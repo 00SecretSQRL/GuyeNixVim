@@ -3,27 +3,24 @@
   lib,
   config,
   ...
-}: {
+}:
+{
   config = {
     plugins.web-devicons = {
       enable = true;
     };
 
-    opts = {
-      # Enable relative line numbers
-      number = true;
-      relativenumber = true;
+      opts = {
+        # Enable relative line numbers
+        relativenumber = true;
 
-      # Set tabs to 2 spaces
-      tabstop = 4;
-      softtabstop = 4;
-      showtabline = 4;
-      expandtab = true;
-      smarttab = true;
-
+        # Set tabs to 2 spaces
+        tabstop = 2;
+        softtabstop = 2;
+        shiftwidth = 2;
+        expandtab = true;
       # Enable auto indenting and set it to spaces
       smartindent = true;
-      shiftwidth = 4;
 
       # Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
       breakindent = true;
@@ -35,7 +32,7 @@
       # Enable text wrap
       wrap = true;
 
-      backspace="indent,eol,start"; # Allow backspacing over everything in insert mode
+      backspace = "indent,eol,start"; # Allow backspacing over everything in insert mode
       # Better splitting
       splitbelow = true;
       splitright = true;
@@ -58,22 +55,26 @@
       redrawtime = 1500; # Time to wait for a sequence to complete
       timeout = true; # Time out on key codes
       timeoutlen = 100; # Time to wait for a mapped sequence to complete
-      
+
       # Memory optimizations
       maxmempattern = 2000; # Maximum amount of memory in Kb used for pattern matching
       maxfuncdepth = 100; # Maximum depth of function calls for user functions
-      
+
       # Scrolling optimizations
       scrolljump = 1; # Minimum number of lines to scroll
       sidescroll = 1; # Minimum number of columns to scroll horizontally
       sidescrolloff = 8; # Number of columns to keep at the sides of the cursor
-      
+
       # Search optimizations
       magic = true; # Enable extended regex patterns
       regexpengine = 1; # Use old regexp engine (faster for simple patterns)
 
       # Set completeopt to have a better completion experience
-      completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
+      completeopt = [
+        "menuone"
+        "noselect"
+        "noinsert"
+      ]; # mostly just for cmp
 
       # Enable persistent undo history
       swapfile = false;
@@ -121,7 +122,7 @@
 
       # Enable chars list
       list = true; # Show invisible characters (tabs, eol, ...)
-      listchars ="tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
+      listchars = "tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
 
       # More space in the neovim command line for displaying messages
       cmdheight = 2;

@@ -19,9 +19,6 @@
       textobjects = {
         enable = true;
       };
-      autotag = {
-        enable = true;
-      };
       context_commentstring = {
         enable = true;
       };
