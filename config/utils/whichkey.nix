@@ -649,6 +649,74 @@
           mode = "n";
           group = "Open Copilot panel";
         }
+        
+        # Copilot Chat mappings
+        {
+          __unkeyed-1 = "<leader>cc";
+          mode = ["n" "v"];
+          group = "+copilot-chat";
+          icon = "󰭹";
+        }
+        {
+          __unkeyed-1 = "<leader>cc";
+          mode = "n";
+          desc = "Open Copilot Chat";
+          icon = "󰭹";
+        }
+        {
+          __unkeyed-1 = "<leader>cc";
+          mode = "v";
+          desc = "Chat about selection";
+          icon = "󰭹";
+        }
+        {
+          __unkeyed-1 = "<leader>ccq";
+          mode = "n";
+          desc = "Close Copilot Chat";
+          icon = "󰅖";
+        }
+        {
+          __unkeyed-1 = "<leader>ccr";
+          mode = "n";
+          desc = "Reset Copilot Chat";
+          icon = "󰑓";
+        }
+        {
+          __unkeyed-1 = "<leader>ccr";
+          mode = "v";
+          desc = "Review selected code";
+          icon = "󰓕";
+        }
+        {
+          __unkeyed-1 = "<leader>cce";
+          mode = ["n" "v"];
+          desc = "Explain code";
+          icon = "󰋖";
+        }
+        {
+          __unkeyed-1 = "<leader>ccf";
+          mode = ["n" "v"];
+          desc = "Fix code";
+          icon = "󰁨";
+        }
+        {
+          __unkeyed-1 = "<leader>cco";
+          mode = "n";
+          desc = "Optimize code";
+          icon = "󰓕";
+        }
+        {
+          __unkeyed-1 = "<leader>ccd";
+          mode = "n";
+          desc = "Generate docs";
+          icon = "󰈙";
+        }
+        {
+          __unkeyed-1 = "<leader>cct";
+          mode = "n";
+          desc = "Generate tests";
+          icon = "󰙨";
+        }
         {
           __unkeyed-1 = "<leader>kt";
           mode = "n";
