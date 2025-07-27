@@ -11,7 +11,7 @@
         suppress_on_insert = true; # Suppress new messages while in insert mode
         ignore_done_already = false; # Ignore new tasks that are already complete
         ignore_empty_message = false; # Ignore new tasks that don't contain a message
-        clear_on_detach =
+        clear_on_detach.__raw =
           # Clear notification group when LSP server detaches
           ''
             function(client_id)
@@ -19,7 +19,7 @@
               return client and client.name or nil
             end
           '';
-        notification_group =
+        notification_group.__raw =
           # How to get a progress message's notification group key
           ''
             function(msg) return msg.lsp_client.name end
@@ -43,13 +43,13 @@
           icon_style = "Question"; # Highlight group for group icons
           priority = 30; # Ordering priority for LSP notification group
           skip_history = true; # Whether progress notifications should be omitted from history
-          format_message = ''
+          format_message.__raw = ''
             require ("fidget.progress.display").default_format_message
           ''; # How to format a progress message
-          format_annote = ''
+          format_annote.__raw = ''
             function (msg) return msg.title end
           ''; # How to format a progress annotation
-          format_group_name = ''
+          format_group_name.__raw = ''
             function (group) return tostring (group) end
           ''; # How to format a progress notification group's name
           overrides = {
@@ -64,7 +64,7 @@
         filter = "info"; # "off", "error", "warn", "info", "debug", "trace"
         history_size = 128; # Number of removed messages to retain in history
         override_vim_notify = true;
-        redirect = ''
+        redirect.__raw = ''
           function(msg, level, opts)
             if opts and opts.on_open then
               return require("fidget.integration.nvim-notify").delegate(msg, level, opts)
