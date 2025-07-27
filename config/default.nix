@@ -81,5 +81,6 @@
     ./utils/undotree.nix
     ./utils/whichkey.nix
     ./utils/wilder.nix
+    ./utils/keypress-display.nix
   ];
 }

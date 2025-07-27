@@ -455,6 +455,17 @@
         desc = "Switch between projects";
       };
     }
+
+    # Copilot panel
+    {
+      mode = "n";
+      key = "<leader>co";
+      action = "<cmd>Copilot panel<CR>";
+      options = {
+        silent = true;
+        desc = "Open Copilot panel";
+      };
+    }
   ];
   extraConfigLua = ''
     local notify = require("notify")
