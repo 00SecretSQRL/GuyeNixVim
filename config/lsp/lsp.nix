@@ -27,7 +27,10 @@
         nil_ls = {enable = true;};
         eslint = {enable = true;};
         pyright = {enable = true;};
-        ruff_lsp = {enable = true;};
+        ruff_lsp = {
+          enable = true;
+          package = null;
+        };
         gopls = {
           enable = true;
           extraOptions = {

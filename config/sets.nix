@@ -5,6 +5,10 @@
   ...
 }: {
   config = {
+    plugins.web-devicons = {
+      enable = true;
+    };
+
     opts = {
       # Enable relative line numbers
       number = true;
