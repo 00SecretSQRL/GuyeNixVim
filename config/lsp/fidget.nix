@@ -72,7 +72,9 @@
           end
         '';
         configs = {
-          default = "require('fidget.notification').default_config";
+          default = ''
+            require('fidget.notification').default_config
+          '';
         };
 
         window = {
