@@ -33,7 +33,7 @@
           done_ttl = 3; # How long a message should persist after completion
           done_icon = "✔"; # Icon shown when all LSP progress tasks are complete
           done_style = "Constant"; # Highlight group for completed LSP tasks
-          progress_ttl = "math.huge"; # How long a message should persist when in progress
+          progress_ttl.__raw = "math.huge"; # How long a message should persist when in progress
           progress_icon = {
             pattern = "dots";
             period = 1;
