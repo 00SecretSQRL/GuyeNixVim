@@ -10,7 +10,7 @@
           jump_next = "]]";
           accept = "<CR>";
           refresh = "gr";
-          open = "<leader>cu";
+          open = "<leader>co";
         };
         layout = {
           position = "bottom"; # | top | left | right
@@ -42,7 +42,7 @@
         "." = false;
       };
       copilot_node_command = "node"; # Node.js version must be > 18.x
-      server_opts_overrides = {};
+      server_opts_overrides = { };
     };
   };
 }
