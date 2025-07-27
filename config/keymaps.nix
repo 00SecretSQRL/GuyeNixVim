@@ -468,10 +468,8 @@
     }
   ];
   extraConfigLua = ''
-    local notify = require("notify")
-
     local function show_notification(message, level)
-      notify(message, level, { title = "conform.nvim" })
+      vim.notify(message, level, { title = "conform.nvim" })
     end
 
     function ToggleLineNumber()

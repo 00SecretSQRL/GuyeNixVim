@@ -53,7 +53,6 @@
 
   extraConfigLua = ''
     local conform = require("conform")
-    local notify = require("notify")
 
     conform.setup({
       format_on_save = function(bufnr)
@@ -66,7 +65,7 @@
     })
 
     local function show_notification(message, level)
-      notify(message, level, { title = "conform.nvim" })
+      vim.notify(message, level, { title = "conform.nvim" })
     end
 
     vim.api.nvim_create_user_command("FormatToggle", function(args)

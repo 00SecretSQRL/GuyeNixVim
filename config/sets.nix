@@ -52,6 +52,26 @@
       # Decrease updatetime
       updatetime = 50; # faster completion (4000ms default)
 
+      # Performance optimizations
+      lazyredraw = true; # Don't redraw while executing macros
+      ttyfast = true; # Faster terminal connection
+      redrawtime = 1500; # Time to wait for a sequence to complete
+      timeout = true; # Time out on key codes
+      timeoutlen = 100; # Time to wait for a mapped sequence to complete
+      
+      # Memory optimizations
+      maxmempattern = 2000; # Maximum amount of memory in Kb used for pattern matching
+      maxfuncdepth = 100; # Maximum depth of function calls for user functions
+      
+      # Scrolling optimizations
+      scrolljump = 1; # Minimum number of lines to scroll
+      sidescroll = 1; # Minimum number of columns to scroll horizontally
+      sidescrolloff = 8; # Number of columns to keep at the sides of the cursor
+      
+      # Search optimizations
+      magic = true; # Enable extended regex patterns
+      regexpengine = 1; # Use old regexp engine (faster for simple patterns)
+
       # Set completeopt to have a better completion experience
       completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
 
@@ -83,8 +103,7 @@
       # Place a column line
       colorcolumn = "80";
 
-      # Reduce which-key timeout to 10ms
-      timeoutlen = 100;
+      # Reduce which-key timeout to 10ms (already set above)
 
       # Set encoding type
       encoding = "utf-8";

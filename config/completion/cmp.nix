@@ -85,10 +85,11 @@
             })
           '';
         };
+        # Performance optimizations - reduced values for faster response
         performance = {
-          debounce = 60;
-          fetching_timeout = 200;
-          max_view_entries = 30;
+          debounce = 30; # Reduced from 60 for faster response
+          fetching_timeout = 150; # Reduced from 200
+          max_view_entries = 20; # Reduced from 30 for better performance
         };
         window = {
           completion = {

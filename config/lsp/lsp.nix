@@ -27,7 +27,7 @@
         nil_ls = {enable = true;};
         eslint = {enable = true;};
         pyright = {enable = true;};
-        ruff_lsp = {
+        ruff = {
           enable = true;
           package = null;
         };
@@ -156,6 +156,28 @@
 
     require('lspconfig.ui.windows').default_options = {
       border = _border
+    }
+
+    -- LSP Performance Optimizations
+    vim.lsp.set_log_level("error") -- Reduce LSP logging
+    
+    -- Faster diagnostics
+    vim.diagnostic.config({
+      virtual_text = true,
+      signs = true,
+      underline = true,
+      update_in_insert = false, -- Don't update diagnostics while typing
+      severity_sort = true,
+    })
+
+    -- Reduce hover delay
+    vim.opt.updatetime = 250 -- Faster hover (default is 4000ms)
+    
+    -- LSP capabilities optimization
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    capabilities.textDocument.completion.completionItem.resolveSupport = {
+      properties = { "documentation", "detail", "additionalTextEdits" }
     }
   '';
 }

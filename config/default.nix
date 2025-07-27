@@ -21,7 +21,6 @@
     ./git/gitsigns.nix
     ./git/diffview.nix
     ./git/lazygit.nix
-    # ./git/neogit.nix
 
     ./languages/nvim-lint.nix
     ./languages/treesitter/treesitter.nix
@@ -52,7 +51,6 @@
     ./ui/dressing-nvim.nix
     ./ui/indent-blankline.nix
     ./ui/noice.nix
-    ./ui/nvim-notify.nix
     # ./ui/nui.nix
 
     ./utils/better-escape.nix
@@ -66,7 +64,6 @@
     ./utils/mini.nix
     ./utils/neodev.nix
     # ./utils/neotest.nix
-    ./utils/nvim-autopairs.nix
     ./utils/nvim-colorizer.nix
     ./utils/nvim-surround.nix
     ./utils/oil.nix
@@ -80,7 +77,5 @@
     ./utils/ultimate-autopair.nix
     ./utils/undotree.nix
     ./utils/whichkey.nix
-    ./utils/wilder.nix
-    ./utils/keypress-display.nix
   ];
 }
