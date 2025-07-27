@@ -23,7 +23,6 @@
     ./git/lazygit.nix
     # ./git/neogit.nix
 
-    ./languages/nvim-jdtls.nix
     ./languages/nvim-lint.nix
     ./languages/treesitter/treesitter.nix
     ./languages/treesitter/treesitter-context.nix
