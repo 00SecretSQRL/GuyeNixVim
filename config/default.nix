@@ -55,6 +55,7 @@
     # ./ui/nui.nix
 
     ./utils/better-escape.nix
+    ./utils/flash.nix
     ./utils/rangernvim.nix
     # ./utils/neocord.nix
     #./utils/hardtime.nix
