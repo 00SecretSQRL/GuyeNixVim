@@ -13,8 +13,8 @@
           right = "|";
         };
         sectionSeparators = {
-          left = "█"; # 
-          right = "█"; # 
+          left = ""; # 
+          right = ""; # 
         };
         sections = {
           lualine_a = ["mode"];
