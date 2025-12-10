@@ -2,8 +2,8 @@
   description = "Guye made a flake for nixvim";
 
   inputs = {
-    nixpackages.url = "github:nixos/nixpkgs/nixos-25.05";
-    nixvim.url = "github:nix-community/nixvim/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
   };
@@ -37,7 +37,7 @@
       {
         checks = {
           # run `nix flake check .` to verify that your config is not broken
-          default = nixvimlib.check.mktestderivationfromnvim {
+          default = nixvimlib.check.mkTestDerivationFromNvim {
             inherit nvim;
             name = "Guye";
           };

@@ -1,17 +1,19 @@
 {
   plugins.illuminate = {
     enable = true;
-    underCursor = true;
-    filetypesDenylist = [
-      "DressingSelect"
-      "Outline"
-      "TelescopePrompt"
-      "alpha"
-      "harpoon"
-      "toggleterm"
-      "neo-tree"
-      "Spectre"
-      "reason"
-    ];
+    settings = {
+      under_cursor = true;
+      filetypes_denylist = [
+        "DressingSelect"
+        "Outline"
+        "TelescopePrompt"
+        "alpha"
+        "harpoon"
+        "toggleterm"
+        "neo-tree"
+        "Spectre"
+        "reason"
+      ];
+    };
   };
 }

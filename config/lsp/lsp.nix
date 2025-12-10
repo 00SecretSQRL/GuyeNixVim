@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   plugins = {
     lsp-format = {
@@ -7,6 +8,10 @@
       enable = true;
       capabilities = "offsetEncoding =  'utf-16'";
       servers = {
+        ansiblels = {
+          enable = false;
+          package = lib.mkForce null;
+        };
         clangd = {enable = true;};
         lua_ls = {
           enable = true;
