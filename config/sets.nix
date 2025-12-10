@@ -50,7 +50,7 @@
       updatetime = 50; # faster completion (4000ms default)
 
       # Performance optimizations
-      lazyredraw = true; # Don't redraw while executing macros
+      lazyredraw = false; # Don't redraw while executing macros (disabled due to Noice compatibility)
       ttyfast = true; # Faster terminal connection
       redrawtime = 1500; # Time to wait for a sequence to complete
       timeout = true; # Time out on key codes

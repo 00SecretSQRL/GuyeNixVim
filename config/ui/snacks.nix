@@ -5,10 +5,14 @@
       bigfile = {
         enabled = true;
         size = 1000000; # 1MB threshold
-        disable = ["treesitter" "lsp" "formatting"];
+        disable = [
+          "treesitter"
+          "lsp"
+          "formatting"
+        ];
       };
       dashboard = {
-        enabled = true;
+        enabled = false;
         welcome_message = "Welcome to Neovim!";
         footer = "Press <leader> to see available keymaps";
         shortcuts = [
