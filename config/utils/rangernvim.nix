@@ -1,9 +1,2 @@
-
-{pkgs, ...}: {
-  extraPlugins = with pkgs.vimPlugins; [
-    ranger-nvim
-  ];
-
-  extraConfigLua = ''
-  '';
-}
+# ranger-nvim removed — oil.nvim covers file navigation
+{}

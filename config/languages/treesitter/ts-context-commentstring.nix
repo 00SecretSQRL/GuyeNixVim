@@ -1,6 +1,2 @@
-{
-  plugins.ts-context-commentstring = {
-    enable = true;
-    disableAutoInitialization = false;
-  };
-}
+# ts-context-commentstring removed — treesitter-nvim has native commentstring support built-in
+{}

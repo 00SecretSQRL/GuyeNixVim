@@ -1,11 +1,2 @@
-{pkgs, ...}: {
-  extraPlugins = with pkgs.vimPlugins; [
-    neodev-nvim
-  ];
-
-  extraConfigLua = ''
-    require("neodev").setup({
-      library = { plugins = {"neotest"}, types = true},
-    })
-  '';
-}
+# neodev removed — replaced by lazydev.nvim (see utils/lazydev.nix)
+{}

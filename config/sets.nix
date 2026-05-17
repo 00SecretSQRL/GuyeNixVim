@@ -6,9 +6,9 @@
 }:
 {
   config = {
-    plugins.web-devicons = {
-      enable = true;
-    };
+    extraPackages = with pkgs; [ fd bat tree-sitter ];
+
+    # icons provided by mini.icons in utils/mini.nix
 
       opts = {
         # Enable relative line numbers
@@ -49,25 +49,12 @@
       # Decrease updatetime
       updatetime = 50; # faster completion (4000ms default)
 
-      # Performance optimizations
-      lazyredraw = false; # Don't redraw while executing macros (disabled due to Noice compatibility)
-      ttyfast = true; # Faster terminal connection
-      redrawtime = 1500; # Time to wait for a sequence to complete
-      timeout = true; # Time out on key codes
-      timeoutlen = 100; # Time to wait for a mapped sequence to complete
-
-      # Memory optimizations
-      maxmempattern = 2000; # Maximum amount of memory in Kb used for pattern matching
-      maxfuncdepth = 100; # Maximum depth of function calls for user functions
-
-      # Scrolling optimizations
-      scrolljump = 1; # Minimum number of lines to scroll
-      sidescroll = 1; # Minimum number of columns to scroll horizontally
-      sidescrolloff = 8; # Number of columns to keep at the sides of the cursor
-
-      # Search optimizations
-      magic = true; # Enable extended regex patterns
-      regexpengine = 1; # Use old regexp engine (faster for simple patterns)
+      # Performance
+      lazyredraw = false; # Noice incompatible
+      timeout = true;
+      timeoutlen = 100;
+      sidescroll = 1;
+      sidescrolloff = 8;
 
       # Set completeopt to have a better completion experience
       completeopt = [

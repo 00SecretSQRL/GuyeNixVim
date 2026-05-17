@@ -1,175 +1,136 @@
-{
+{pkgs, ...}: {
+  extraPackages = with pkgs; [ trash-cli ];
+
   plugins.snacks = {
     enable = true;
     settings = {
       bigfile = {
         enabled = true;
-        size = 1000000; # 1MB threshold
-        disable = [
-          "treesitter"
-          "lsp"
-          "formatting"
-        ];
+        size = 1048576; # 1MB
       };
+
       dashboard = {
-        enabled = false;
-        welcome_message = "Welcome to Neovim!";
-        footer = "Press <leader> to see available keymaps";
-        shortcuts = [
-          {
-            key = "f";
-            desc = "Find files";
-            action = "Telescope find_files";
-          }
-          {
-            key = "g";
-            desc = "Git status";
-            action = "LazyGit";
-          }
-          {
-            key = "r";
-            desc = "Recent files";
-            action = "Telescope oldfiles";
-          }
-          {
-            key = "c";
-            desc = "Config";
-            action = "edit ~/.config/nvim/init.lua";
-          }
+        enabled = true;
+        sections = [
+          { section = "header"; }
+          { section = "keys"; gap = 1; padding = 1; }
         ];
+        preset = {
+          header = ''
+ _____                         _   _ _
+|  __ \                       | | | (_)
+| |  \/_   _ _   _  ___ ______| | | |_ _ __ ___
+| | __| | | | | | |/ _ \______| | | | | '_ ` _ \
+| |_\ \ |_| | |_| |  __/      \ \_/ / | | | | | |
+ \____/\__,_|\__, |\___|       \___/|_|_| |_| |_|
+              __/ |
+             |___/'';
+          keys = [
+            { icon = " "; key = "f"; desc = "Find File"; action.__raw = ''function() require("fzf-lua").files() end''; }
+            { icon = " "; key = "n"; desc = "New File"; action = ":ene | startinsert"; }
+            { icon = " "; key = "r"; desc = "Recent Files"; action.__raw = ''function() require("fzf-lua").oldfiles() end''; }
+            { icon = " "; key = "g"; desc = "Find Text"; action.__raw = ''function() require("fzf-lua").live_grep() end''; }
+            { icon = " "; key = "s"; desc = "Restore Session"; action.__raw = ''function() require("persistence").load() end''; }
+            { icon = "󰒲 "; key = "l"; desc = "Lazy"; action = ":Lazy"; }
+            { icon = " "; key = "q"; desc = "Quit"; action = ":qa"; }
+          ];
+        };
       };
+
       indent = {
         enabled = true;
         char = "│";
-        context_char = "┊";
-        highlight = "Comment";
-        context_highlight = "Comment";
-        priority = 100;
-      };
-      input = {
-        enabled = true;
-        border = "rounded";
-        title = "Input";
-        title_pos = "center";
-        width = 50;
-        height = 1;
-        row = "50%";
-        col = "50%";
-      };
-      notifier = {
-        enabled = true;
-        position = "top_right";
-        timeout = 3000;
-        border = "rounded";
-        max_width = 50;
-        max_height = 10;
-      };
-      quickfile = {
-        enabled = true;
-        border = "rounded";
-        title = "Quick File";
-        title_pos = "center";
-        width = 60;
-        height = 20;
-        row = "10%";
-        col = "20%";
-        mappings = {
-          open = "<CR>";
-          close = "q";
-          delete = "d";
-          rename = "r";
+        hl = "SnacksIndent";
+        scope = {
+          enabled = true;
+          hl = "SnacksIndentScope";
         };
       };
-      scratch = {
+
+      input.enabled = true;
+
+      notifier = {
         enabled = true;
-        border = "rounded";
-        title = "Scratch Buffer";
-        title_pos = "center";
-        width = 80;
-        height = 20;
-        row = "10%";
-        col = "10%";
-        filetype = "markdown";
+        timeout = 3000;
+        style = "compact";
       };
+
+      quickfile.enabled = true;
+
+      scope.enabled = true;
+
       scroll = {
         enabled = true;
-        smooth = true;
-        speed = 1;
-        easing = "ease";
+        animate = {
+          duration = { step = 15; total = 150; };
+          easing = "linear";
+        };
       };
-      scope = {
-        enabled = true;
-        highlight = "Visual";
-        priority = 50;
-      };
-      statuscolumn = {
-        enabled = true;
-        signs = true;
-        numbers = true;
-        fold = true;
-        separator = " ";
-      };
-      terminal = {
-        enabled = true;
-        border = "rounded";
-        title = "Terminal";
-        title_pos = "center";
-        width = 80;
-        height = 20;
-        row = "10%";
-        col = "10%";
-        shell = "zsh";
-      };
+
+      statuscolumn.enabled = true;
+
       words = {
         enabled = true;
-        highlight = "Search";
-        priority = 50;
-        timeout = 1000;
+        debounce = 200;
       };
     };
   };
 
-  # Add keymaps for snacks modules
   keymaps = [
-    # Dashboard
     {
       mode = "n";
-      key = "<leader>dd";
-      action = "<cmd>lua require('snacks').dashboard()<CR>";
-      options = {
-        silent = true;
-        desc = "Open dashboard";
-      };
+      key = "<leader>un";
+      action.__raw = ''function() Snacks.notifier.hide() end'';
+      options = { silent = true; desc = "Dismiss notifications"; };
     }
-    # Quick file
     {
       mode = "n";
-      key = "<leader>qf";
-      action = "<cmd>lua require('snacks').quickfile()<CR>";
-      options = {
-        silent = true;
-        desc = "Quick file picker";
-      };
+      key = "<leader>gg";
+      action.__raw = ''function() Snacks.lazygit() end'';
+      options = { silent = true; desc = "Lazygit"; };
     }
-    # Scratch buffer
     {
       mode = "n";
-      key = "<leader>ss";
-      action = "<cmd>lua require('snacks').scratch()<CR>";
-      options = {
-        silent = true;
-        desc = "New scratch buffer";
-      };
+      key = "<leader>gB";
+      action.__raw = ''function() Snacks.gitbrowse() end'';
+      options = { silent = true; desc = "Git browse"; };
     }
-    # Terminal
     {
       mode = "n";
-      key = "<leader>tt";
-      action = "<cmd>lua require('snacks').terminal()<CR>";
-      options = {
-        silent = true;
-        desc = "Open terminal";
-      };
+      key = "<leader>gb";
+      action.__raw = ''function() Snacks.git.blame_line() end'';
+      options = { silent = true; desc = "Git blame line"; };
+    }
+    {
+      mode = ["n" "t"];
+      key = "<C-/>";
+      action.__raw = ''function() Snacks.terminal() end'';
+      options = { silent = true; desc = "Toggle terminal"; };
+    }
+    {
+      mode = ["n" "t"];
+      key = "<C-_>";
+      action.__raw = ''function() Snacks.terminal() end'';
+      options = { silent = true; desc = "Toggle terminal"; };
+    }
+    {
+      mode = "n";
+      key = "]]";
+      action.__raw = ''function() Snacks.words.jump(vim.v.count1) end'';
+      options = { silent = true; desc = "Next word reference"; };
+    }
+    {
+      mode = "n";
+      key = "[[";
+      action.__raw = ''function() Snacks.words.jump(-vim.v.count1) end'';
+      options = { silent = true; desc = "Prev word reference"; };
     }
   ];
+
+  extraConfigLua = ''
+    -- Wire vim.ui.input to Snacks.input after snacks loads
+    vim.ui.input = function(opts, on_confirm)
+      Snacks.input(opts, on_confirm)
+    end
+  '';
 }

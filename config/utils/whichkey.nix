@@ -8,772 +8,151 @@
         separator = "➜";
       };
       spec = [
-        # General Mappings
-        {
-          __unkeyed-1 = "<leader>c";
-          mode = ["n" "v"];
-          group = "+code";
-          icon = "󰘦";
-        }
-        {
-          __unkeyed-1 = "<leader>d";
-          mode = ["n" "v"];
-          group = "+debug";
-          icon = "󰆈";
-        }
-        {
-          __unkeyed-1 = "<leader>f";
-          mode = "n";
-          group = "+find/file";
-          icon = "󰈞";
-        }
-        {
-          __unkeyed-1 = "<leader>g";
-          mode = ["n" "v"];
-          group = "+git";
-          icon = "󰊢";
-        }
-        {
-          __unkeyed-1 = "<leader>q";
-          mode = "n";
-          group = "+quit/session";
-          icon = "󰅚";
-        }
-        {
-          __unkeyed-1 = "<leader>s";
-          mode = "n";
-          group = "+search";
-          icon = "󰍉";
-        }
-        {
-          __unkeyed-1 = "<leader><Tab>";
-          mode = "n";
-          group = "+tab";
-          icon = "󰓩";
-        }
-        {
-          __unkeyed-1 = "<leader>t";
-          mode = "n";
-          group = "+test";
-          icon = "󰙨";
-        }
-        {
-          __unkeyed-1 = "<leader>u";
-          mode = "n";
-          group = "+ui";
-          icon = "󰌘";
-        }
-        {
-          __unkeyed-1 = "<leader>w";
-          mode = "n";
-          group = "+windows";
-          icon = "󰖮";
-        }
-        {
-          __unkeyed-1 = "<leader>x";
-          mode = "n";
-          group = "+diagnostics";
-          icon = "󰅚";
-        }
-        {
-          __unkeyed-1 = "<leader>e";
-          mode = "n";
-          group = "+explorer";
-          icon = "󰉋";
-        }
-        {
-          __unkeyed-1 = "<leader>o";
-          mode = "n";
-          group = "+oil";
-          icon = "󰏗";
-        }
-        {
-          __unkeyed-1 = "<leader>a";
-          mode = "n";
-          group = "+harpoon";
-          icon = "󱡁";
-        }
-        {
-          __unkeyed-1 = "<leader>b";
-          mode = "n";
-          group = "+buffer";
-          icon = "󰓃";
-        }
-        {
-          __unkeyed-1 = "<leader>p";
-          mode = ["n" "v"];
-          group = "+paste";
-          icon = "󰆐";
-        }
-        {
-          __unkeyed-1 = "<leader>y";
-          mode = ["n" "v"];
-          group = "+yank";
-          icon = "󰆏";
-        }
+        # ── Group labels ──────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>c";  mode = ["n" "v"]; group = "+code";          icon = "󰘦"; }
+        { __unkeyed-1 = "<leader>cc"; mode = ["n" "v"]; group = "+copilot-chat";  icon = "󰭹"; }
+        { __unkeyed-1 = "<leader>d";  mode = ["n" "v"]; group = "+debug";         icon = "󰆈"; }
+        { __unkeyed-1 = "<leader>f";  mode = "n";       group = "+find/file";     icon = "󰈞"; }
+        { __unkeyed-1 = "<leader>g";  mode = ["n" "v"]; group = "+git";           icon = "󰊢"; }
+        { __unkeyed-1 = "<leader>gh"; mode = ["n" "v"]; group = "+hunks";         icon = "󰊢"; }
+        { __unkeyed-1 = "<leader>q";  mode = "n";       group = "+quit/session";  icon = "󰅚"; }
+        { __unkeyed-1 = "<leader>s";  mode = "n";       group = "+search";        icon = "󰍉"; }
+        { __unkeyed-1 = "<leader><Tab>"; mode = "n";    group = "+tab";           icon = "󰓩"; }
+        { __unkeyed-1 = "<leader>u";  mode = "n";       group = "+ui";            icon = "󰌘"; }
+        { __unkeyed-1 = "<leader>w";  mode = "n";       group = "+windows";       icon = "󰖮"; }
+        { __unkeyed-1 = "<leader>x";  mode = "n";       group = "+diagnostics";   icon = "󰅚"; }
+        { __unkeyed-1 = "<leader>b";  mode = "n";       group = "+buffer";        icon = "󰓃"; }
+        { __unkeyed-1 = "<leader>D";  mode = ["n" "v"]; group = "Delete→void";    icon = "󰆐"; }
+        { __unkeyed-1 = "<leader>y";  mode = ["n" "v"]; group = "+yank";          icon = "󰆏"; }
 
-        # Tab Management
-        {
-          __unkeyed-1 = "<leader><tab>l";
-          mode = "n";
-          group = "Last tab";
-        }
-        {
-          __unkeyed-1 = "<leader><tab>f";
-          mode = "n";
-          group = "First Tab";
-        }
-        {
-          __unkeyed-1 = "<leader><tab>]";
-          mode = "n";
-          group = "Next Tab";
-        }
-        {
-          __unkeyed-1 = "<leader><tab>d";
-          mode = "n";
-          group = "Close tab";
-        }
-        {
-          __unkeyed-1 = "<leader><tab>[";
-          mode = "n";
-          group = "Previous Tab";
-        }
+        # ── Tabs ──────────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader><Tab>l"; mode = "n"; desc = "Last tab"; }
+        { __unkeyed-1 = "<leader><Tab>f"; mode = "n"; desc = "First tab"; }
+        { __unkeyed-1 = "<leader><Tab>]"; mode = "n"; desc = "Next tab"; }
+        { __unkeyed-1 = "<leader><Tab>["; mode = "n"; desc = "Prev tab"; }
+        { __unkeyed-1 = "<leader><Tab>d"; mode = "n"; desc = "Close tab"; }
 
-        # Window Management
-        {
-          __unkeyed-1 = "<leader>ww";
-          mode = "n";
-          group = "Other window";
-        }
-        {
-          __unkeyed-1 = "<leader>wd";
-          mode = "n";
-          group = "Delete window";
-        }
-        {
-          __unkeyed-1 = "<leader>w-";
-          mode = "n";
-          group = "Split window below";
-        }
-        {
-          __unkeyed-1 = "<leader>w|";
-          mode = "n";
-          group = "Split window right";
-        }
+        # ── Windows ───────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>ww"; mode = "n"; desc = "Other window"; }
+        { __unkeyed-1 = "<leader>wd"; mode = "n"; desc = "Delete window"; }
+        { __unkeyed-1 = "<leader>w-"; mode = "n"; desc = "Split below"; }
+        { __unkeyed-1 = "<leader>w|"; mode = "n"; desc = "Split right"; }
 
-        # Session Management
-        {
-          __unkeyed-1 = "<leader>qq";
-          mode = "n";
-          group = "Quit Neovim";
-        }
-        {
-          __unkeyed-1 = "<leader>qs";
-          mode = "n";
-          group = "Save session";
-        }
-        {
-          __unkeyed-1 = "<leader>ql";
-          mode = "n";
-          group = "Load session";
-        }
-        {
-          __unkeyed-1 = "<leader>qd";
-          mode = "n";
-          group = "Delete session";
-        }
+        # ── Session ───────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>qq"; mode = "n"; desc = "Quit all"; }
+        { __unkeyed-1 = "<leader>qs"; mode = "n"; desc = "Restore session"; }
+        { __unkeyed-1 = "<leader>ql"; mode = "n"; desc = "Restore last session"; }
+        { __unkeyed-1 = "<leader>qd"; mode = "n"; desc = "Don't save session"; }
 
-        # UI Toggles
-        {
-          __unkeyed-1 = "<leader>ul";
-          mode = "n";
-          group = "Toggle line numbers";
-        }
-        {
-          __unkeyed-1 = "<leader>uL";
-          mode = "n";
-          group = "Toggle relative line numbers";
-        }
-        {
-          __unkeyed-1 = "<leader>uw";
-          mode = "n";
-          group = "Toggle word wrap";
-        }
-        {
-          __unkeyed-1 = "<leader>un";
-          mode = "n";
-          group = "Dismiss All Notifications";
-        }
+        # ── UI toggles ────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>ul"; mode = "n"; desc = "Toggle line numbers"; }
+        { __unkeyed-1 = "<leader>uL"; mode = "n"; desc = "Toggle relative numbers"; }
+        { __unkeyed-1 = "<leader>uw"; mode = "n"; desc = "Toggle wrap"; }
+        { __unkeyed-1 = "<leader>uh"; mode = "n"; desc = "Toggle inlay hints"; }
+        { __unkeyed-1 = "<leader>un"; mode = "n"; desc = "Dismiss notifications"; }
+        { __unkeyed-1 = "<leader>uC"; mode = "n"; desc = "Colorscheme preview"; }
+        { __unkeyed-1 = "<leader>ut"; mode = "n"; desc = "Undo tree"; }
 
-        # LSP
-        {
-          __unkeyed-1 = "<leader>cw";
-          mode = "n";
-          group = "Workspace Symbol";
-        }
-        {
-          __unkeyed-1 = "<leader>cr";
-          mode = "n";
-          group = "Rename";
-        }
-        {
-          __unkeyed-1 = "<leader>ca";
-          mode = "n";
-          group = "Code Action";
-        }
-        {
-          __unkeyed-1 = "<leader>cd";
-          mode = "n";
-          group = "Line Diagnostics";
-        }
+        # ── LSP / Code ────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>ca"; mode = ["n" "v"]; desc = "Code action"; }
+        { __unkeyed-1 = "<leader>cr"; mode = "n"; desc = "Rename"; }
+        { __unkeyed-1 = "<leader>cw"; mode = "n"; desc = "Workspace symbols"; }
+        { __unkeyed-1 = "<leader>cd"; mode = "n"; desc = "Line diagnostics"; }
+        { __unkeyed-1 = "<leader>cs"; mode = "n"; desc = "Symbols (Trouble)"; }
+        { __unkeyed-1 = "<leader>cl"; mode = "n"; desc = "LSP refs (Trouble)"; }
+        { __unkeyed-1 = "<leader>cf"; mode = "n"; desc = "Format buffer"; }
+        { __unkeyed-1 = "<leader>cF"; mode = "n"; desc = "Format range"; }
+        { __unkeyed-1 = "<leader>cp"; mode = "n"; desc = "Markdown preview"; }
 
-        # Git
-        {
-          __unkeyed-1 = "<leader>gh";
-          mode = "n";
-          group = "Preview hunk";
-        }
-        {
-          __unkeyed-1 = "<leader>ghb";
-          mode = "n";
-          group = "Blame line";
-        }
-        {
-          __unkeyed-1 = "<leader>ghd";
-          mode = "n";
-          group = "Diff this";
-        }
-        {
-          __unkeyed-1 = "<leader>ghp";
-          mode = "n";
-          group = "Preview hunk";
-        }
-        {
-          __unkeyed-1 = "<leader>ghR";
-          mode = "n";
-          group = "Reset buffer";
-        }
-        {
-          __unkeyed-1 = "<leader>ghr";
-          mode = "n";
-          group = "Reset hunk";
-        }
-        {
-          __unkeyed-1 = "<leader>ghs";
-          mode = "n";
-          group = "Stage hunk";
-        }
-        {
-          __unkeyed-1 = "<leader>ghS";
-          mode = "n";
-          group = "Stage buffer";
-        }
-        {
-          __unkeyed-1 = "<leader>ghu";
-          mode = "n";
-          group = "Undo stage hunk";
-        }
-        {
-          __unkeyed-1 = "<leader>gg";
-          mode = "n";
-          group = "LazyGit";
-        }
+        # ── Copilot Chat ──────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>cc";  mode = ["n" "v"]; desc = "Open chat"; }
+        { __unkeyed-1 = "<leader>ccq"; mode = "n";       desc = "Close chat"; }
+        { __unkeyed-1 = "<leader>ccr"; mode = ["n" "v"]; desc = "Reset/Review"; }
+        { __unkeyed-1 = "<leader>cce"; mode = ["n" "v"]; desc = "Explain"; }
+        { __unkeyed-1 = "<leader>ccf"; mode = ["n" "v"]; desc = "Fix"; }
+        { __unkeyed-1 = "<leader>cco"; mode = "n";       desc = "Optimize"; }
+        { __unkeyed-1 = "<leader>ccd"; mode = "n";       desc = "Docs"; }
+        { __unkeyed-1 = "<leader>cct"; mode = "n";       desc = "Tests"; }
+        { __unkeyed-1 = "<leader>ccs"; mode = "n";       desc = "Available models"; }
 
-        # Formatting
-        {
-          __unkeyed-1 = "<leader>uf";
-          mode = "n";
-          group = "Format buffer";
-        }
-        {
-          __unkeyed-1 = "<leader>cf";
-          mode = "n";
-          group = "Format buffer";
-        }
-        {
-          __unkeyed-1 = "<leader>cF";
-          mode = "n";
-          group = "Format buffer (range)";
-        }
+        # ── Git (snacks + gitsigns) ───────────────────────────────────────────
+        { __unkeyed-1 = "<leader>gg";  mode = "n"; desc = "Lazygit"; }
+        { __unkeyed-1 = "<leader>gB";  mode = "n"; desc = "Git browse"; }
+        { __unkeyed-1 = "<leader>gb";  mode = "n"; desc = "Blame line"; }
+        { __unkeyed-1 = "<leader>gc";  mode = "n"; desc = "Git commits (fzf)"; }
+        { __unkeyed-1 = "<leader>gs";  mode = "n"; desc = "Git status (fzf)"; }
+        { __unkeyed-1 = "<leader>ge";  mode = "n"; desc = "Git explorer (neo-tree)"; }
+        { __unkeyed-1 = "<leader>ghs"; mode = ["n" "v"]; desc = "Stage hunk"; }
+        { __unkeyed-1 = "<leader>ghr"; mode = ["n" "v"]; desc = "Reset hunk"; }
+        { __unkeyed-1 = "<leader>ghS"; mode = "n"; desc = "Stage buffer"; }
+        { __unkeyed-1 = "<leader>ghu"; mode = "n"; desc = "Undo stage hunk"; }
+        { __unkeyed-1 = "<leader>ghR"; mode = "n"; desc = "Reset buffer"; }
+        { __unkeyed-1 = "<leader>ghp"; mode = "n"; desc = "Preview hunk"; }
+        { __unkeyed-1 = "<leader>ghd"; mode = "n"; desc = "Diff this"; }
 
-        # Diagnostics
-        {
-          __unkeyed-1 = "<leader>xx";
-          mode = "n";
-          group = "Toggle diagnostics";
-        }
-        {
-          __unkeyed-1 = "<leader>xX";
-          mode = "n";
-          group = "Toggle workspace diagnostics";
-        }
-        {
-          __unkeyed-1 = "<leader>xt";
-          mode = "n";
-          group = "Toggle todo comments";
-        }
-        {
-          __unkeyed-1 = "<leader>xQ";
-          mode = "n";
-          group = "Quickfix";
-        }
+        # ── Find (fzf-lua) ────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader><space>"; mode = "n"; desc = "Find files"; }
+        { __unkeyed-1 = "<leader>fg";  mode = "n"; desc = "Grep"; }
+        { __unkeyed-1 = "<leader>fa";  mode = "n"; desc = "Find files"; }
+        { __unkeyed-1 = "<leader>fr";  mode = "n"; desc = "Recent files"; }
+        { __unkeyed-1 = "<leader>fb";  mode = "n"; desc = "Buffers"; }
+        { __unkeyed-1 = "<leader>:";   mode = "n"; desc = "Command history"; }
 
-        # Explorer
-        {
-          __unkeyed-1 = "<leader>E";
-          mode = "n";
-          group = "Explorer (root dir)";
-        }
-        {
-          __unkeyed-1 = "<leader>be";
-          mode = "n";
-          group = "Explorer (buffer dir)";
-        }
-        {
-          __unkeyed-1 = "<leader>ge";
-          mode = "n";
-          group = "Explorer (git root)";
-        }
+        # ── Search (fzf-lua) ──────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>sa";  mode = "n"; desc = "Auto commands"; }
+        { __unkeyed-1 = "<leader>sb";  mode = "n"; desc = "Buffer fuzzy"; }
+        { __unkeyed-1 = "<leader>sc";  mode = "n"; desc = "Command history"; }
+        { __unkeyed-1 = "<leader>sC";  mode = "n"; desc = "Commands"; }
+        { __unkeyed-1 = "<leader>sd";  mode = "n"; desc = "Document diagnostics"; }
+        { __unkeyed-1 = "<leader>sD";  mode = "n"; desc = "Workspace diagnostics"; }
+        { __unkeyed-1 = "<leader>sh";  mode = "n"; desc = "Help pages"; }
+        { __unkeyed-1 = "<leader>sH";  mode = "n"; desc = "Highlight groups"; }
+        { __unkeyed-1 = "<leader>sk";  mode = "n"; desc = "Keymaps"; }
+        { __unkeyed-1 = "<leader>sM";  mode = "n"; desc = "Man pages"; }
+        { __unkeyed-1 = "<leader>sm";  mode = "n"; desc = "Marks"; }
+        { __unkeyed-1 = "<leader>so";  mode = "n"; desc = "Options"; }
+        { __unkeyed-1 = "<leader>sR";  mode = "n"; desc = "Resume picker"; }
+        { __unkeyed-1 = "<leader>ss";  mode = "n"; desc = "Workspace symbols"; }
+        { __unkeyed-1 = "<leader>sS";  mode = "n"; desc = "Document symbols"; }
+        { __unkeyed-1 = "<leader>st";  mode = "n"; desc = "Todo comments"; }
 
-        # Buffer Management
-        {
-          __unkeyed-1 = "<leader>bd";
-          mode = "n";
-          group = "Delete buffer";
-        }
-        {
-          __unkeyed-1 = "<leader>bb";
-          mode = "n";
-          group = "Buffer picker";
-        }
-        {
-          __unkeyed-1 = "<leader>br";
-          mode = "n";
-          group = "Close buffers to the right";
-        }
-        {
-          __unkeyed-1 = "<leader>bl";
-          mode = "n";
-          group = "Close buffers to the left";
-        }
-        {
-          __unkeyed-1 = "<leader>bo";
-          mode = "n";
-          group = "Close other buffers";
-        }
-        {
-          __unkeyed-1 = "<leader>bp";
-          mode = "n";
-          group = "Previous buffer";
-        }
-        {
-          __unkeyed-1 = "<leader>bP";
-          mode = "n";
-          group = "Pin buffer";
-        }
+        # ── Buffer ────────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>b";   mode = "n"; desc = "Buffers (fzf)"; }
+        { __unkeyed-1 = "<leader>be";  mode = "n"; desc = "Buffer explorer"; }
+        { __unkeyed-1 = "<leader>bd";  mode = "n"; desc = "Delete buffer"; }
 
-        # Debug
-        {
-          __unkeyed-1 = "<leader>dB";
-          mode = "n";
-          group = "Breakpoint Condition";
-        }
-        {
-          __unkeyed-1 = "<leader>db";
-          mode = "n";
-          group = "Toggle Breakpoint";
-        }
-        {
-          __unkeyed-1 = "<leader>dc";
-          mode = "n";
-          group = "Continue";
-        }
-        {
-          __unkeyed-1 = "<leader>da";
-          mode = "n";
-          group = "Run with Args";
-        }
-        {
-          __unkeyed-1 = "<leader>dC";
-          mode = "n";
-          group = "Run to cursor";
-        }
-        {
-          __unkeyed-1 = "<leader>dg";
-          mode = "n";
-          group = "Go to line (no execute)";
-        }
-        {
-          __unkeyed-1 = "<leader>di";
-          mode = "n";
-          group = "Step into";
-        }
-        {
-          __unkeyed-1 = "<leader>dj";
-          mode = "n";
-          group = "Down";
-        }
-        {
-          __unkeyed-1 = "<leader>dk";
-          mode = "n";
-          group = "Up";
-        }
-        {
-          __unkeyed-1 = "<leader>dl";
-          mode = "n";
-          group = "Run Last";
-        }
-        {
-          __unkeyed-1 = "<leader>do";
-          mode = "n";
-          group = "Step Out";
-        }
-        {
-          __unkeyed-1 = "<leader>dO";
-          mode = "n";
-          group = "Step Over";
-        }
-        {
-          __unkeyed-1 = "<leader>dp";
-          mode = "n";
-          group = "Pause";
-        }
-        {
-          __unkeyed-1 = "<leader>dr";
-          mode = "n";
-          group = "Toggle REPL";
-        }
-        {
-          __unkeyed-1 = "<leader>ds";
-          mode = "n";
-          group = "Session";
-        }
-        {
-          __unkeyed-1 = "<leader>dt";
-          mode = "n";
-          group = "Terminate";
-        }
-        {
-          __unkeyed-1 = "<leader>du";
-          mode = "n";
-          group = "Dap UI";
-        }
-        {
-          __unkeyed-1 = "<leader>dw";
-          mode = "n";
-          group = "Widgets";
-        }
-        {
-          __unkeyed-1 = "<leader>de";
-          mode = ["n" "v"];
-          group = "Eval";
-        }
+        # ── Explorer ──────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>e";  mode = "n"; desc = "Toggle neo-tree"; }
+        { __unkeyed-1 = "<leader>E";  mode = "n"; desc = "Neo-tree (cwd)"; }
 
-        # Telescope
-        {
-          __unkeyed-1 = "<leader><space>";
-          mode = "n";
-          group = "Find project files";
-        }
-        {
-          __unkeyed-1 = "<leader>fg";
-          mode = "n";
-          group = "Grep (root dir)";
-        }
-        {
-          __unkeyed-1 = "<leader>:";
-          mode = "n";
-          group = "Command History";
-        }
-        {
-          __unkeyed-1 = "<leader>fa";
-          mode = "n";
-          group = "Find project files";
-        }
-        {
-          __unkeyed-1 = "<leader>fr";
-          mode = "n";
-          group = "Recent";
-        }
-        {
-          __unkeyed-1 = "<leader>fb";
-          mode = "n";
-          group = "Buffers";
-        }
-        {
-          __unkeyed-1 = "<leader>fp";
-          mode = "n";
-          group = "Projects";
-        }
-        {
-          __unkeyed-1 = "<leader>gc";
-          mode = "n";
-          group = "Git commits";
-        }
-        {
-          __unkeyed-1 = "<leader>gs";
-          mode = "n";
-          group = "Git status";
-        }
-        {
-          __unkeyed-1 = "<leader>sa";
-          mode = "n";
-          group = "Auto Commands";
-        }
-        {
-          __unkeyed-1 = "<leader>sb";
-          mode = "n";
-          group = "Buffer search";
-        }
-        {
-          __unkeyed-1 = "<leader>sc";
-          mode = "n";
-          group = "Command History";
-        }
-        {
-          __unkeyed-1 = "<leader>sC";
-          mode = "n";
-          group = "Commands";
-        }
-        {
-          __unkeyed_1 = "<leader>sD";
-          mode = "n";
-          group = "Workspace diagnostics";
-        }
-        {
-          __unkeyed_1 = "<leader>sd";
-          mode = "n";
-          group = "Document diagnostics";
-        }
-        {
-          __unkeyed_1 = "<leader>sh";
-          mode = "n";
-          group = "Help pages";
-        }
-        {
-          __unkeyed_1 = "<leader>sH";
-          mode = "n";
-          group = "Search Highlight Groups";
-        }
-        {
-          __unkeyed_1 = "<leader>sk";
-          mode = "n";
-          group = "Keymaps";
-        }
-        {
-          __unkeyed_1 = "<leader>sM";
-          mode = "n";
-          group = "Man pages";
-        }
-        {
-          __unkeyed_1 = "<leader>sm";
-          mode = "n";
-          group = "Jump to Mark";
-        }
-        {
-          __unkeyed_1 = "<leader>so";
-          mode = "n";
-          group = "Options";
-        }
-        {
-          __unkeyed_1 = "<leader>sR";
-          mode = "n";
-          group = "Resume";
-        }
-        {
-          __unkeyed_1 = "<leader>st";
-          mode = "n";
-          group = "Todo (Telescope)";
-        }
-        {
-          __unkeyed_1 = "<leader>uC";
-          mode = "n";
-          group = "Colorscheme preview";
-        }
+        # ── Diagnostics / Trouble ─────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>xx"; mode = "n"; desc = "Diagnostics toggle"; }
+        { __unkeyed-1 = "<leader>xX"; mode = "n"; desc = "Buffer diagnostics"; }
+        { __unkeyed-1 = "<leader>xL"; mode = "n"; desc = "Location list"; }
+        { __unkeyed-1 = "<leader>xQ"; mode = "n"; desc = "Quickfix list"; }
+        { __unkeyed-1 = "<leader>xt"; mode = "n"; desc = "Todo (Trouble)"; }
 
-        # Test
-        {
-          __unkeyed-1 = "<leader>tt";
-          mode = "n";
-          group = "Run test";
-        }
-        {
-          __unkeyed-1 = "<leader>tT";
-          mode = "n";
-          group = "Run test (verbose)";
-        }
-        {
-          __unkeyed-1 = "<leader>tr";
-          mode = "n";
-          group = "Run nearest test";
-        }
-        {
-          __unkeyed-1 = "<leader>td";
-          mode = "n";
-          group = "Debug test";
-        }
-        {
-          __unkeyed-1 = "<leader>ts";
-          mode = "n";
-          group = "Stop test";
-        }
-        {
-          __unkeyed-1 = "<leader>to";
-          mode = "n";
-          group = "Output panel";
-        }
-        {
-          __unkeyed-1 = "<leader>tO";
-          mode = "n";
-          group = "Toggle output panel";
-        }
-        {
-          __unkeyed-1 = "<leader>tS";
-          mode = "n";
-          group = "Toggle summary";
-        }
+        # ── Debug ─────────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>dB"; mode = "n"; desc = "Breakpoint condition"; }
+        { __unkeyed-1 = "<leader>db"; mode = "n"; desc = "Toggle breakpoint"; }
+        { __unkeyed-1 = "<leader>dc"; mode = "n"; desc = "Continue"; }
+        { __unkeyed-1 = "<leader>da"; mode = "n"; desc = "Run with args"; }
+        { __unkeyed-1 = "<leader>dC"; mode = "n"; desc = "Run to cursor"; }
+        { __unkeyed-1 = "<leader>di"; mode = "n"; desc = "Step into"; }
+        { __unkeyed-1 = "<leader>do"; mode = "n"; desc = "Step out"; }
+        { __unkeyed-1 = "<leader>dO"; mode = "n"; desc = "Step over"; }
+        { __unkeyed-1 = "<leader>dl"; mode = "n"; desc = "Run last"; }
+        { __unkeyed-1 = "<leader>dp"; mode = "n"; desc = "Pause"; }
+        { __unkeyed-1 = "<leader>dr"; mode = "n"; desc = "Toggle REPL"; }
+        { __unkeyed-1 = "<leader>dt"; mode = "n"; desc = "Terminate"; }
+        { __unkeyed-1 = "<leader>du"; mode = "n"; desc = "DAP UI"; }
+        { __unkeyed-1 = "<leader>dw"; mode = "n"; desc = "Widgets"; }
+        { __unkeyed-1 = "<leader>de"; mode = ["n" "v"]; desc = "Eval"; }
 
-        # Utilities
-        {
-          __unkeyed-1 = "<leader>ut";
-          mode = "n";
-          group = "Undo tree";
-        }
-        {
-          __unkeyed-1 = "<leader>cp";
-          mode = "n";
-          group = "Markdown preview";
-        }
-        {
-          __unkeyed-1 = "<leader>co";
-          mode = "n";
-          group = "Open Copilot panel";
-        }
-        
-        # Copilot Chat mappings
-        {
-          __unkeyed-1 = "<leader>cc";
-          mode = ["n" "v"];
-          group = "+copilot-chat";
-          icon = "󰭹";
-        }
-        {
-          __unkeyed-1 = "<leader>cc";
-          mode = "n";
-          desc = "Open Copilot Chat";
-          icon = "󰭹";
-        }
-        {
-          __unkeyed-1 = "<leader>cc";
-          mode = "v";
-          desc = "Chat about selection";
-          icon = "󰭹";
-        }
-        {
-          __unkeyed-1 = "<leader>ccq";
-          mode = "n";
-          desc = "Close Copilot Chat";
-          icon = "󰅖";
-        }
-        {
-          __unkeyed-1 = "<leader>ccr";
-          mode = "n";
-          desc = "Reset Copilot Chat";
-          icon = "󰑓";
-        }
-        {
-          __unkeyed-1 = "<leader>ccr";
-          mode = "v";
-          desc = "Review selected code";
-          icon = "󰓕";
-        }
-        {
-          __unkeyed-1 = "<leader>cce";
-          mode = ["n" "v"];
-          desc = "Explain code";
-          icon = "󰋖";
-        }
-        {
-          __unkeyed-1 = "<leader>ccf";
-          mode = ["n" "v"];
-          desc = "Fix code";
-          icon = "󰁨";
-        }
-        {
-          __unkeyed-1 = "<leader>cco";
-          mode = "n";
-          desc = "Optimize code";
-          icon = "󰓕";
-        }
-        {
-          __unkeyed-1 = "<leader>ccd";
-          mode = "n";
-          desc = "Generate docs";
-          icon = "󰈙";
-        }
-        {
-          __unkeyed-1 = "<leader>cct";
-          mode = "n";
-          desc = "Generate tests";
-          icon = "󰙨";
-        }
-        {
-          __unkeyed-1 = "<leader>cci";
-          mode = "n";
-          desc = "Open Copilot Chat";
-          icon = "󰭻";
-        }
-        {
-          __unkeyed-1 = "<leader>cca";
-          mode = "n";
-          desc = "Open Copilot Chat";
-          icon = "󰔛";
-        }
-        {
-          __unkeyed-1 = "<leader>ccs";
-          mode = "n";
-          desc = "Ask about available models";
-          icon = "󰆓";
-        }
-        {
-          __unkeyed-1 = "<leader>ccl";
-          mode = "n";
-          desc = "Open Copilot Chat";
-          icon = "󰁯";
-        }
-        {
-          __unkeyed-1 = "<leader>kt";
-          mode = "n";
-          group = "Test keypress display";
-        }
-        {
-          __unkeyed-1 = "<leader>D";
-          mode = ["n" "v"];
-          group = "Delete to void register";
-        }
-
-        # Snacks
-        {
-          __unkeyed-1 = "<leader>dd";
-          mode = "n";
-          group = "Open dashboard";
-        }
-        {
-          __unkeyed-1 = "<leader>qf";
-          mode = "n";
-          group = "Quick file picker";
-        }
-        {
-          __unkeyed-1 = "<leader>ss";
-          mode = "n";
-          group = "New scratch buffer";
-        }
-        {
-          __unkeyed-1 = "<leader>tt";
-          mode = "n";
-          group = "Open terminal";
-        }
+        # ── Harpoon ───────────────────────────────────────────────────────────
+        { __unkeyed-1 = "<leader>a";  mode = "n"; desc = "Harpoon add"; icon = "󱡁"; }
       ];
+
       win = {
         border = "none";
         wo.winblend = 0;

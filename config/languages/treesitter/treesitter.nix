@@ -23,7 +23,7 @@
         enable = true;
       };
     };
-    folding = true;
+    folding.enable = true;
     nixvimInjections = true;
   };
 }
