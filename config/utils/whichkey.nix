@@ -10,7 +10,6 @@
       spec = [
         # ── Group labels ──────────────────────────────────────────────────────
         { __unkeyed-1 = "<leader>c";  mode = ["n" "v"]; group = "+code";          icon = "󰘦"; }
-        { __unkeyed-1 = "<leader>cc"; mode = ["n" "v"]; group = "+copilot-chat";  icon = "󰭹"; }
         { __unkeyed-1 = "<leader>d";  mode = ["n" "v"]; group = "+debug";         icon = "󰆈"; }
         { __unkeyed-1 = "<leader>f";  mode = "n";       group = "+find/file";     icon = "󰈞"; }
         { __unkeyed-1 = "<leader>g";  mode = ["n" "v"]; group = "+git";           icon = "󰊢"; }
@@ -63,17 +62,6 @@
         { __unkeyed-1 = "<leader>cf"; mode = "n"; desc = "Format buffer"; }
         { __unkeyed-1 = "<leader>cF"; mode = "n"; desc = "Format range"; }
         { __unkeyed-1 = "<leader>cp"; mode = "n"; desc = "Markdown preview"; }
-
-        # ── Copilot Chat ──────────────────────────────────────────────────────
-        { __unkeyed-1 = "<leader>cc";  mode = ["n" "v"]; desc = "Open chat"; }
-        { __unkeyed-1 = "<leader>ccq"; mode = "n";       desc = "Close chat"; }
-        { __unkeyed-1 = "<leader>ccr"; mode = ["n" "v"]; desc = "Reset/Review"; }
-        { __unkeyed-1 = "<leader>cce"; mode = ["n" "v"]; desc = "Explain"; }
-        { __unkeyed-1 = "<leader>ccf"; mode = ["n" "v"]; desc = "Fix"; }
-        { __unkeyed-1 = "<leader>cco"; mode = "n";       desc = "Optimize"; }
-        { __unkeyed-1 = "<leader>ccd"; mode = "n";       desc = "Docs"; }
-        { __unkeyed-1 = "<leader>cct"; mode = "n";       desc = "Tests"; }
-        { __unkeyed-1 = "<leader>ccs"; mode = "n";       desc = "Available models"; }
 
         # ── Git (snacks + gitsigns) ───────────────────────────────────────────
         { __unkeyed-1 = "<leader>gg";  mode = "n"; desc = "Lazygit"; }

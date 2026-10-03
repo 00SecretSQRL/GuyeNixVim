@@ -12,8 +12,6 @@
 
     # Completion — blink.cmp (Rust-based) replaces nvim-cmp + 6 source plugins
     ./completion/blink.nix
-    ./completion/copilot.nix
-    ./completion/copilot-chat.nix
 
     ./dap/dap.nix
 

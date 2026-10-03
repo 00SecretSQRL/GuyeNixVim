@@ -25,11 +25,6 @@
         nixvimlib = nixvim.lib.${system};
         pkgs = import nixpkgs {
           inherit system;
-          config.allowUnfreePredicate =
-            pkg:
-            builtins.elem (nixpkgs.lib.getName pkg) [
-              "copilot-language-server"
-            ];
         };
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {

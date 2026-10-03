@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   plugins.blink-cmp = {
     enable = true;
     settings = {
@@ -45,15 +45,7 @@
       };
 
       sources = {
-        default = [ "lsp" "path" "snippets" "buffer" "copilot" ];
-        providers = {
-          copilot = {
-            name = "copilot";
-            module = "blink-cmp-copilot";
-            score_offset = 100;
-            async = true;
-          };
-        };
+        default = [ "lsp" "path" "snippets" "buffer" ];
       };
 
       snippets.preset = "luasnip";
@@ -61,6 +53,4 @@
       fuzzy.implementation = "prefer_rust_with_warning";
     };
   };
-
-  extraPlugins = with pkgs.vimPlugins; [ blink-cmp-copilot ];
 }
